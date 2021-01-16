@@ -7,18 +7,18 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 
-import com.proxedure.addition.databinding.ActivityMainBinding;
+import com.proxedure.addition.databinding.ActivityAdditionBinding;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
+public class AdditionActivity extends AppCompatActivity {
+    private ActivityAdditionBinding binding;
 
     private static boolean isInit = false;
     private static int num1 = 0;
     private static int num2 = 0;
 
-    public MainActivity() {
+    public AdditionActivity() {
         if (!isInit) {
             newQuiz();
             isInit = true;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityAdditionBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
 
